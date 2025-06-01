@@ -41,6 +41,10 @@ export default function PostDetail() {
     fetchImage();
   }, [postid]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [postid]);
+
   return (
     <div className="w-full">
       <h1 className="text-[#60AFFA] text-4xl text-center italic mb-4">
