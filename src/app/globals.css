@@ -2,25 +2,29 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground: black;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  @apply rounded-lg shadow hover:shadow-lg transition p-4 text-white border border-[#4b5563];
+  background: linear-gradient(135deg, #0b0f19, #1e293b);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.15);
+}
+
+.card-img {
+  @apply w-full h-40 object-cover rounded mb-2;
+}
+
+.detail_container {
+  @apply rounded-lg shadow hover:shadow-lg transition p-4 text-white border border-[#4b5563];
+  background: linear-gradient(135deg, #0b0f19, #1e293b);
 }
